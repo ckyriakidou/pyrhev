@@ -304,8 +304,8 @@ def attachDisk(vmid,diskXML):
     rhevPost("/api/vms/"+ vmid + "/disks" ,diskXML)
 
 def set_parser():
-    parser = OptionParser()
-    parser.add_option("--action","-a",dest="action",help="Action to do: create, test, console,delete,list,adddisk,addnic,ticket,console",)
+    parser = OptionParser(
+    parser.add_option("--action","-a",dest="action",help="Action to do: create, test, console,delete,list,adddisk,addnetwork,ticket,console,ksinstall",)
     parser.add_option("--name","-n",dest="vmname",help="Name of VM")
     parser.add_option("--os","--ostype",dest="os",help="Type of guest OS")
     parser.add_option("--memory","-m",dest="memory",help="Memory in MB")
